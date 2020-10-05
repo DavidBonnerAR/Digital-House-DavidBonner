@@ -1,0 +1,3 @@
+interface ICoisasQueVoam {
+    fun voar()
+}

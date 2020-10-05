@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#C180FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FOOBAR"
+        android:textColor="#FFBBCC"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:layout_marginTop="200dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="#fff"
+        android:textColorHint="#fff"
+        android:padding="25dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:imeOptions="actionNext"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#fff"
+        android:backgroundTint="#fff"
+        android:padding="25dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:imeOptions="actionDone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:text="LOGIN"
+        android:textColor="#fff"
+        android:background="#8051C4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:padding="15dp"
+            android:text="Sign Up"/>
+    </LinearLayout>
+
+
+    </LinearLayout>
