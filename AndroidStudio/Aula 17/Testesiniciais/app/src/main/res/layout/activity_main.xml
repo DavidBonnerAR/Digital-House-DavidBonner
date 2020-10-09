@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="18sp"
+        android:layout_margin="22dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/etTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:hint="Digite seu nome"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"/>
+    <Button
+        android:id="@+id/btnExibir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="303e9f"
+        android:text="Exibir"
+        android:textAllCaps="false"
+        android:textColor="#9fff"/>
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="303e9f"
+        android:text="Exibir"
+        android:textAllCaps="false"
+        android:textColor="#ff5f"/>
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Meu nome é Lucas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="80dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
