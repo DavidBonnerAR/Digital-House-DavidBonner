@@ -12,17 +12,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        button.setOnClickListener{
+        avancaPagina()
+        checarCheckbox()
+    }
+
+    private fun checarCheckbox() {
+        checkCerteza.setOnCheckedChangeListener { _, isChecked ->
+            Toast.makeText(this, "Checkbox funciona", Toast.LENGTH_SHORT).show()
+            button.isEnabled = true
+        }
+    }
+
+    private fun avancaPagina() {
+        button.setOnClickListener {
             /*val intent = Intent(this, NovaTela::class.java)
             startActivity(intent)*/
-            Toast.makeText(this, "Testando Toast", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Botão funciona", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, NovaTela::class.java)
             startActivity(intent)
-        }
-
-        checkCerteza.setOnClickListener{_, isChecked ->
-            //Toast.makeText(this, "Testando Toast", Toast.LENGTH_SHORT).show()
-            button.isEnabled = isChecked
         }
     }
 }

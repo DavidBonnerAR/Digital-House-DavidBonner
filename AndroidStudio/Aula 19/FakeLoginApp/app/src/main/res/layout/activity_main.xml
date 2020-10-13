@@ -40,24 +40,28 @@
         android:layout_gravity="center|center_vertical">
 
         <EditText
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="email"
             android:singleLine="true"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/colorWhite"
             android:backgroundTint="@color/colorWhite"/>
 
         <EditText
+            android:id="@+id/editTextSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
+            android:hint="Passwaord"
+            android:inputType="textPassword"
             android:textColorHint="@color/colorWhite"
             android:backgroundTint="@color/colorWhite"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="20dp"/>
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:textColor="@color/colorMain"
@@ -69,6 +73,7 @@
             android:layout_marginTop="50dp"/>
 
         <Button
+            android:id="@+id/btnCreateAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"

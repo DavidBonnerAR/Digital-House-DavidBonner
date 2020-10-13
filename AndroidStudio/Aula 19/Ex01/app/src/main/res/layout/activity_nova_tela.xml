@@ -4,12 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".NovaTela">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Minha"
+        android:text="Insira seus dados:"
+        android:layout_gravity="center"
+        android:gravity="center"
     />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        />
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        />
 
 </LinearLayout>

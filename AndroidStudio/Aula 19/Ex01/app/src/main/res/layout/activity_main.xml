@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_gravity="center"
+        android:text="Se quer ir para próxima página aperte o botão: "
+        android:padding="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -19,15 +22,20 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:padding="18dp"
+        android:layout_gravity="center"
+        android:text="Avançar"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="58dp"
-        android:enabled="false"/>
+        android:enabled="false"
+        />
 
     <CheckBox
         android:id="@+id/checkCerteza"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="18dp"
         android:text="Tem certeza?"
         android:textColor="@color/colorPrimary"/>
 
