@@ -1,17 +1,11 @@
-package com.digitalhouse.fakeloginapp
+package com.dbonner.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class CreateAccount : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_account)
-
-
-
-
-
-
+        setContentView(R.layout.activity_main)
     }
 }

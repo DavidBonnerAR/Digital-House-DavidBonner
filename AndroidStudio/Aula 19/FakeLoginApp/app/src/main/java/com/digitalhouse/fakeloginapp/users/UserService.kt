@@ -11,6 +11,12 @@ class UserService {
          * Realiza login
          */
         fun logIn(email: String, password: String): UserModel? {
+            if(email == null){
+                throw Exception ("Email vazio")
+            }
+            if(password == null){
+                throw Exception ("senha vazia")
+            }
             return users.find {
                 it.email == email.toLowerCase().trim() && it.password == password
             }
