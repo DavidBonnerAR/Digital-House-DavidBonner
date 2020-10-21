@@ -4,25 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IserirDados"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/meufrag">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
     <EditText
         android:id="@+id/editTxtNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="22dp"
         android:hint="Nome"
+        android:inputType="textPersonName"
         />
 
     <EditText
         android:id="@+id/editTxtAnoNasc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="22dp"
         android:hint="Ano de Nascimento"
         android:inputType="number"
         />
