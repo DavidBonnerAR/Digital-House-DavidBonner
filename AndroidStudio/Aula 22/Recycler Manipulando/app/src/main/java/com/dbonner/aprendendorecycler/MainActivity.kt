@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val meusChats = arrayListOf(Chat("David", "Onde você está?", "4:20"))
+        val meusChats = arrayListOf(Chat("David", "Onde você está?", "4:20"),
+                                    Chat("Diego", "Cadê as chaves?", "11:30"))
 
         val viewAdapter = MeuAdapter(meusChats)
         val viewManager = LinearLayoutManager(this)
