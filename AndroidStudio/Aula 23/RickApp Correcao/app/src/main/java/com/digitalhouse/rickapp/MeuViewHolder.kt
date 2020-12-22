@@ -21,6 +21,5 @@ class MeuViewHolder(view: View): RecyclerView.ViewHolder(view) {
         statusPersonagem.text = "Estado atual: " + personagem.status
         Picasso.get().load(personagem.imagemUrl)
             .into(foto)
-
     }
 }

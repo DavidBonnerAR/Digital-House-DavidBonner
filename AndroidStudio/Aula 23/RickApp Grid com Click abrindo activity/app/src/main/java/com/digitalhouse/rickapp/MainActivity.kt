@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewManager = GridLayoutManager(this, 2)
+        val viewManager = LinearLayoutManager(this)
         val recyclerView = findViewById<RecyclerView>(R.id.listaPersonagens)
 
         RickApi.getData(this, object: IRespostaDaApi {
