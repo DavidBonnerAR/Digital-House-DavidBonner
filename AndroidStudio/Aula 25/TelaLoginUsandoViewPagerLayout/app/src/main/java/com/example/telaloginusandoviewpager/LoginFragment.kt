@@ -18,19 +18,21 @@ class LoginFragment : Fragment() {
 
 
     private lateinit var mudarTabListener: IMudarTab
+    private lateinit var minhaView: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
-        view.findViewById<MaterialButton>(R.id.btnLogin).setOnClickListener {
-            if (validaEntradas(view)){
-                Toast.makeText(view.context, "Login Realizado", Toast.LENGTH_LONG).show()
+        minhaView = inflater.inflate(R.layout.fragment_login, container, false)
+
+        minhaView.findViewById<MaterialButton>(R.id.btnLogin).setOnClickListener {
+            if (validaEntradas(minhaView)){
+                Toast.makeText(minhaView.context, "Login Realizado", Toast.LENGTH_LONG).show()
             }
         }
 
-        view.findViewById<TextInputEditText>(R.id.editTextUserNameLogin).addTextChangedListener(object :
+        minhaView.findViewById<TextInputEditText>(R.id.editTextUserNameLogin).addTextChangedListener(object :
             TextWatcher {
             override fun afterTextChanged(s: Editable?) {
             }
@@ -39,11 +41,11 @@ class LoginFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                view.findViewById<TextInputLayout>(R.id.txtUserNameLogin).error = ""
+                minhaView.findViewById<TextInputLayout>(R.id.txtUserNameLogin).error = ""
             }
         })
 
-        view.findViewById<TextInputEditText>(R.id.editTextPasswordLogin).addTextChangedListener(object :
+        minhaView.findViewById<TextInputEditText>(R.id.editTextPasswordLogin).addTextChangedListener(object :
             TextWatcher {
             override fun afterTextChanged(s: Editable?) {
             }
@@ -52,14 +54,14 @@ class LoginFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                view.findViewById<TextInputLayout>(R.id.txtPasswordLogin).error = ""
+                minhaView.findViewById<TextInputLayout>(R.id.txtPasswordLogin).error = ""
             }
         })
 
-        view.findViewById<MaterialButton>(R.id.btnSignUpLogin).setOnClickListener {
-            mudarTabListener.mudarTab()
+        minhaView.findViewById<MaterialButton>(R.id.btnSignUpLogin).setOnClickListener {
+            mudarTabListener.mudarTab(LOGIN_FRAGMENT)
         }
-        return view
+        return minhaView
     }
 
 
@@ -85,5 +87,12 @@ class LoginFragment : Fragment() {
         }
 
         return resultado
+    }
+
+    fun userNameAlterado(username: String) {
+        val editUserName = minhaView.findViewById<TextInputEditText>(R.id.editTextUserNameLogin)
+        editUserName.setText(username)
+        val editPassword = minhaView.findViewById<TextInputEditText>(R.id.editTextPasswordLogin)
+        editPassword.requestFocus()
     }
 }
