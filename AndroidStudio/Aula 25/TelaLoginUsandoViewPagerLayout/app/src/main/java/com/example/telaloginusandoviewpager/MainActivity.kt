@@ -11,12 +11,14 @@ import android.widget.EditText
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IMudarTab {
+    private val tab by lazy{
+        findViewById<TabLayout>(R.id.layoutLogin)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val tab = findViewById<TabLayout>(R.id.layoutLogin)
         val pager = findViewById<ViewPager>(R.id.viewPagerLogin)
 
         tab.setupWithViewPager(pager)
@@ -26,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
         )
 
+    }
+
+    override fun mudarTab(){
+        val tabNova = tab.getTabAt(1)
+        tabNova?.select()
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
