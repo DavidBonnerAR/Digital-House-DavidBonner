@@ -24,6 +24,10 @@ class PersonagemViewModel(
                 TODO("Not yet implemented")
             }
 
+            override fun onSucces(result: List<PersonagemModel>) {
+                TODO("Not yet implemented")
+            }
+
         })
     }
 

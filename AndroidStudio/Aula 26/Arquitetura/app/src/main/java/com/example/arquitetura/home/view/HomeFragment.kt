@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
         ).get(TarefaViewModel::class.java)
 
         viewModel.listaDeTarefasData.observe(viewLifecycleOwner , {
-
+            minhaView.findViewById<TextView>(R.id.txtTarefa1)
 
         })
 

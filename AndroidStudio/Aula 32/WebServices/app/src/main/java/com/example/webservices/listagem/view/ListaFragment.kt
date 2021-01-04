@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.webservices.R
+import com.example.webservices.listagem.model.PersonagemModel
 import com.example.webservices.listagem.repository.PersonagemRepository
 import com.example.webservices.listagem.viewmodel.PersonagemViewModel
 
@@ -27,12 +29,12 @@ class ListaFragment : Fragment() {
         val lista = view.findViewById<RecyclerView>(R.id.lista)
         val manager = LinearLayoutManager(view.context)
 
-        val listaAdapter = ListaAdapter(listOf())
+        val listaDePersonagens = mutableListOf<PersonagemModel>()
+        val listaAdapter = ListaAdapter(listaDePersonagens)
 
         lista.apply {
             setHasFixedSize(true)
             layoutManager = manager
-
             adapter = listaAdapter
         }
 
@@ -41,6 +43,11 @@ class ListaFragment : Fragment() {
             PersonagemViewModel.PersonagemViewModelFactory(PersonagemRepository())
         ).get(PersonagemViewModel::class.java)
 
-        viewModel.personagens.observe(this, {})
+        viewModel.personagens.observe(this, Observer{
+            listaDePersonagens.addAll(it)
+            //listaAdapter.notifyDataSetChanged()
+        })
+
+        viewModel.obterLista()
     }
 }

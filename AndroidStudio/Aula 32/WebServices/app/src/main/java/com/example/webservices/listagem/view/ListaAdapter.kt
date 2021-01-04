@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.webservices.R
 import com.example.webservices.listagem.model.PersonagemModel
 
-class ListaAdapter(private val personagemModels: List<PersonagemModel>): RecyclerView.Adapter<ItemViewHolder>() {
+class ListaAdapter(private var personagemModels: MutableList<PersonagemModel>): RecyclerView.Adapter<ItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item, parent, false)
         return ItemViewHolder(view)
