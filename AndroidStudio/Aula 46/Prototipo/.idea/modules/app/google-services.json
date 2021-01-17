@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "509544862171",
+    "project_id": "aula46prototipo",
+    "storage_bucket": "aula46prototipo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509544862171:android:c97a4db6e241e88ffb97fe",
+        "android_client_info": {
+          "package_name": "com.example.prototipo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509544862171-1evq0k2o5ko4mefhed047cbkcltsflg3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prototipo",
+            "certificate_hash": "5daf54e862cbc965e37662af7554c1457f81b3f8"
+          }
+        },
+        {
+          "client_id": "509544862171-ijs294ofqa8jisqi8csqq2n7hfelb2lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ7-DR8C5fICBBq3Y05tC4Uv_0HMKUdks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509544862171-ijs294ofqa8jisqi8csqq2n7hfelb2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
